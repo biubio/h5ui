@@ -11,6 +11,8 @@
 [![License](http://img.shields.io/:license-mit-blue.svg)](https://mit-license.org)
 
 ## 什么是 H5UI？
+
+[![Join the chat at https://gitter.im/acterce/h5ui](https://badges.gitter.im/acterce/h5ui.svg)](https://gitter.im/acterce/h5ui?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 <p>
 H5UI 是 <a href="http://qschou.com" target="_blank" alt="轻松筹">轻松筹</a> 移动端H5组件样式库，旨在Web前端团队快速完成H5页面开发。除了保证组件在使用体验的统一，也提高页面开发效率。
 </p>
