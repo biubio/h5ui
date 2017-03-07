@@ -1,0 +1,19 @@
+{
+  "name": "h5ui",
+  "version": "2.0.0",
+  "description": "Mobile front-end CSS framework",
+  "homepage": "http://h5ui.io",
+  "author": "Acterce",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:acterce/h5ui.git"
+  },
+  "keywords": [
+    "H5UI",
+    "CSS",
+    "mobile",
+    "LESS",
+    "ui"
+  ],
+  "license": "MIT"
+}
