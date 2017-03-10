@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="keywords" content="H5UI,移动UI组件库,H5前端,前端样式库,CSS样式库,H5UI交互设计,前端框架,UI框架,UI-framework,Mobile-front-end,CSS-framework">
+    <meta name="description" content="H5UI-简洁优雅的移动UI组件库">
+
+    <title>Alert</title>
+
+    <link rel="dns-prefetch" href="http://s.h5ui.io">
+    <link rel="shortcut icon" href="http://s.h5ui.io/img/favicon.ico">
+
+    <!-- H5UI CSS -->
+    <link rel="stylesheet" href="../css/h5ui.min.css">
+    <!-- Example CSS -->
+    <link rel="stylesheet" href="../css/example.min.css">
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?849d2590ddf20decb7453afa67c978c0";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+
+<body ontouchstart>
+
+<div class="h5ui-page top">
+    <div class="h5ui-group">
+
+        <a class="h5ui-list" href="javascript:void(0);" id="btn-alert-success">
+            <div class="h5ui-list_bd">成功提示</div>
+            <div class="h5ui-list_ft">
+                <i class="h5ui-list_ft_arrow"></i>
+            </div>
+        </a>
+
+        <a class="h5ui-list" href="javascript:void(0);" id="btn-alert-error">
+            <div class="h5ui-list_bd">失败提示</div>
+            <div class="h5ui-list_ft">
+                <i class="h5ui-list_ft_arrow"></i>
+            </div>
+        </a>
+
+        <a class="h5ui-list" href="javascript:void(0);" id="btn-alert-info">
+            <div class="h5ui-list_bd">警告提示</div>
+            <div class="h5ui-list_ft">
+                <i class="h5ui-list_ft_arrow"></i>
+            </div>
+        </a>
+
+    </div>
+</div>
+
+<!-- Copyright -->
+<div class="example-copyright fixed">
+    <a href="../index.html" class="flag"></a>
+</div>
+
+<!-- start [成功提示] -->
+<div class="h5ui-alert h5ui-alert_success" id="alert-success">
+    <i class="h5ui-alert_success_icon"></i><span>提示操作成功</span>
+</div>
+<!-- end [成功提示] -->
+
+<!-- start [失败提示] -->
+<div class="h5ui-alert h5ui-alert_error" id="alert-error">
+    <i class="h5ui-alert_error_icon"></i><span>提示操作失败</span>
+</div>
+<!-- end [失败提示] -->
+
+<!-- start [警告提示] -->
+<div class="h5ui-alert h5ui-alert_warning" id="alert-info">
+    <i class="h5ui-alert_warning_icon"></i><span>提示相关信息或建议</span>
+</div>
+<!-- end [警告提示] -->
+
+<!-- jQuery -->
+<script src="http://s.h5ui.io/js/jquery/jquery.min.js"></script>
+<!-- H5UI JS -->
+<script src="../js/h5ui.min.js"></script>
+
+<script>
+    // 成功提示
+    $("#btn-alert-success").click(function() {
+        $("#alert-success").show().delay(2000).fadeOut();
+    });
+
+    // 失败提示
+    $("#btn-alert-error").click(function() {
+        $("#alert-error").show().delay(2000).fadeOut();
+    });
+
+    // 警告提示
+    $("#btn-alert-info").click(function() {
+        $("#alert-info").show().delay(2000).fadeOut();
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="keywords" content="H5UI,移动UI组件库,H5前端,前端样式库,CSS样式库,H5UI交互设计,前端框架,UI框架,UI-framework,Mobile-front-end,CSS-framework">
+    <meta name="description" content="H5UI-简洁优雅的移动UI组件库">
+
+    <title>选择框 Select</title>
+
+    <link rel="dns-prefetch" href="http://s.h5ui.io">
+    <link rel="shortcut icon" href="http://s.h5ui.io/img/favicon.ico">
+
+    <!-- H5UI CSS -->
+    <link rel="stylesheet" href="../css/h5ui.min.css">
+    <!-- Example CSS -->
+    <link rel="stylesheet" href="../css/example.min.css">
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?849d2590ddf20decb7453afa67c978c0";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+
+<body ontouchstart>
+
+<div class="h5ui-page top">
+
+    <!-- start [select] -->
+    <div class="h5ui-group">
+
+        <h5 class="h5ui-group_title">
+            日期选择
+        </h5>
+
+        <div class="h5ui-form">
+            <label class="h5ui-form-label" for="date">选择日期</label>
+            <div class="h5ui-select date-select">
+                <input class="h5ui-form-input" id="date" type="date" value="">
+            </div>
+        </div>
+
+        <div class="h5ui-form">
+            <label class="h5ui-form-label" for="datetime">选择时间</label>
+            <div class="h5ui-select date-select">
+                <input class="h5ui-form-input" id="datetime" type="datetime-local" value="">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="h5ui-group">
+
+        <h5 class="h5ui-group_title">
+            内容选择
+        </h5>
+
+        <div class="h5ui-form">
+            <label class="h5ui-form-label" for="province">选择省份</label>
+            <div class="h5ui-select">
+                <select name="province" id="province">
+                    <option value="0">请选择</option>
+                    <option value="20">北京</option>
+                    <option value="38">天津</option>
+                    <option value="56">河北</option>
+                    <option value="240">山西</option>
+                    <option value="372">内蒙古</option>
+                    <option value="486">辽宁</option>
+                    <option value="601">吉林</option>
+                    <option value="671">黑龙江</option>
+                    <option value="813">上海</option>
+                    <option value="832">江苏</option>
+                    <option value="948">浙江</option>
+                    <option value="1050">安徽</option>
+                    <option value="1172">福建</option>
+                    <option value="1267">江西</option>
+                    <option value="1379">山东</option>
+                    <option value="1537">河南</option>
+                    <option value="1715">湖北</option>
+                    <option value="1833">湖南</option>
+                    <option value="1970">广东</option>
+                    <option value="2113">广西</option>
+                    <option value="2237">海南</option>
+                    <option value="2265">重庆</option>
+                    <option value="2305">四川</option>
+                    <option value="2508">贵州</option>
+                    <option value="2606">云南</option>
+                    <option value="2752">西藏</option>
+                    <option value="2833">陕西</option>
+                    <option value="2951">甘肃</option>
+                    <option value="3052">青海</option>
+                    <option value="3104">宁夏</option>
+                    <option value="3132">新疆</option>
+                    <option value="3307">香港</option>
+                    <option value="3308">澳门</option>
+                    <option value="3309">台湾</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="h5ui-form">
+            <label class="h5ui-form-label" for="bank">选择银行</label>
+            <div class="h5ui-select">
+                <select name="bank" id="bank">
+                    <option value="">请选择</option>
+                    <option value="ccb">建设银行</option>
+                    <option value="icbc">工商银行</option>
+                    <option value="abchina">农业银行</option>
+                    <option value="bankcomm">交通银行</option>
+                    <option value="boc">中国银行</option>
+                    <option value="psbc">邮政银行</option>
+                    <option value="cebbank">光大银行</option>
+                    <option value="cmbchina">招商银行</option>
+                    <option value="ecitic">中信银行</option>
+                    <option value="cmbc">民生银行</option>
+                    <option value="cib">兴业银行</option>
+                    <option value="cgb">广发银行</option>
+                    <option value="spdb">浦发银行</option>
+                    <option value="spabank">平安银行</option>
+                </select>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="h5ui-group">
+
+        <div class="h5ui-form">
+            <div class="h5ui-select select-cell">
+                <select>
+                    <option value="">请选择银行</option>
+                    <option value="ccb">建设银行</option>
+                    <option value="icbc">工商银行</option>
+                    <option value="abchina">农业银行</option>
+                    <option value="bankcomm">交通银行</option>
+                    <option value="boc">中国银行</option>
+                    <option value="psbc">邮政银行</option>
+                    <option value="cebbank">光大银行</option>
+                    <option value="cmbchina">招商银行</option>
+                    <option value="ecitic">中信银行</option>
+                    <option value="cmbc">民生银行</option>
+                    <option value="cib">兴业银行</option>
+                    <option value="cgb">广发银行</option>
+                    <option value="spdb">浦发银行</option>
+                    <option value="spabank">平安银行</option>
+                </select>
+            </div>
+        </div>
+
+    </div>
+    <!-- end [select] -->
+
+</div>
+
+<!-- Copyright -->
+<div class="example-copyright fixed">
+    <a href="../index.html" class="flag"></a>
+</div>
+
+<!-- jQuery -->
+<script src="http://s.h5ui.io/js/jquery/jquery.min.js"></script>
+<!-- H5UI JS -->
+<script src="../js/h5ui.min.js"></script>
+
+</body>
+</html>

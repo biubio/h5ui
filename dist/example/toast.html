@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="keywords" content="H5UI,移动UI组件库,H5前端,前端样式库,CSS样式库,H5UI交互设计,前端框架,UI框架,UI-framework,Mobile-front-end,CSS-framework">
+    <meta name="description" content="H5UI-简洁优雅的移动UI组件库">
+
+    <title>Toast</title>
+
+    <link rel="dns-prefetch" href="http://s.h5ui.io">
+    <link rel="shortcut icon" href="http://s.h5ui.io/img/favicon.ico">
+
+    <!-- H5UI CSS -->
+    <link rel="stylesheet" href="../css/h5ui.min.css">
+    <!-- Example CSS -->
+    <link rel="stylesheet" href="../css/example.min.css">
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?849d2590ddf20decb7453afa67c978c0";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+
+<body ontouchstart>
+
+<div class="h5ui-page top">
+
+    <!-- start [lists] -->
+    <div class="h5ui-group">
+
+        <a class="h5ui-list" href="javascript:void(0);" id="btn-toast-default">
+            <div class="h5ui-list_bd">
+                轻提示
+            </div>
+            <div class="h5ui-list_ft">
+                <i class="h5ui-list_ft_arrow"></i>
+            </div>
+        </a>
+
+        <a class="h5ui-list" href="javascript:void(0);" id="btn-toast-loading">
+            <div class="h5ui-list_bd">
+                加载提示
+            </div>
+            <div class="h5ui-list_ft">
+                <i class="h5ui-list_ft_arrow"></i>
+            </div>
+        </a>
+
+        <a class="h5ui-list" href="javascript:void(0);" id="btn-toast-success">
+            <div class="h5ui-list_bd">
+                成功提示
+            </div>
+            <div class="h5ui-list_ft">
+                <i class="h5ui-list_ft_arrow"></i>
+            </div>
+        </a>
+
+    </div>
+    <!-- end [lists] -->
+
+</div>
+
+<!-- Copyright -->
+<div class="example-copyright fixed">
+    <a href="../index.html" class="flag"></a>
+</div>
+
+<!-- start [轻提示] -->
+<div class="h5ui-toast" id="toast-default">
+    <div class="h5ui-toast_backdrop"></div>
+    <div class="h5ui-toast_dialog">
+        <div class="h5ui-toast_content">
+            <span>请登录后再进行评论</span>
+        </div>
+    </div>
+</div>
+<!-- end [轻提示] -->
+
+<!-- start [加载提示] -->
+<div class="h5ui-toast h5ui-toast_loading" id="toast-loading">
+    <div class="h5ui-toast_backdrop"></div>
+    <div class="h5ui-toast_dialog">
+        <div class="h5ui-toast_content">
+            <span>
+                <div class="h5ui-toast_loading_icon">
+                    <div class="loading-icon-leaf loading-icon-leaf_0"></div>
+                    <div class="loading-icon-leaf loading-icon-leaf_1"></div>
+                    <div class="loading-icon-leaf loading-icon-leaf_2"></div>
+                    <div class="loading-icon-leaf loading-icon-leaf_3"></div>
+                    <div class="loading-icon-leaf loading-icon-leaf_4"></div>
+                    <div class="loading-icon-leaf loading-icon-leaf_5"></div>
+                    <div class="loading-icon-leaf loading-icon-leaf_6"></div>
+                    <div class="loading-icon-leaf loading-icon-leaf_7"></div>
+                    <div class="loading-icon-leaf loading-icon-leaf_8"></div>
+                    <div class="loading-icon-leaf loading-icon-leaf_9"></div>
+                    <div class="loading-icon-leaf loading-icon-leaf_10"></div>
+                    <div class="loading-icon-leaf loading-icon-leaf_11"></div>
+                </div>
+                加载中
+            </span>
+        </div>
+    </div>
+</div>
+<!-- end [加载提示] -->
+
+<!-- start [成功提示] -->
+<div class="h5ui-toast h5ui-toast_success" id="toast-success">
+    <div class="h5ui-toast_backdrop"></div>
+    <div class="h5ui-toast_dialog">
+        <div class="h5ui-toast_content">
+            <span><i class="h5ui-toast_success_icon"></i>已完成</span>
+        </div>
+    </div>
+</div>
+<!-- end [成功提示] -->
+
+<!-- jQuery -->
+<script src="http://s.h5ui.io/js/jquery/jquery.min.js"></script>
+<!-- H5UI JS -->
+<script src="../js/h5ui.min.js"></script>
+
+<script>
+    // 刷新页面
+    function setReload(){
+        window.location.reload();
+    }
+
+    // 默认Toast
+    $("#btn-toast-default").click(function() {
+        $("#toast-default").show().delay(2000).fadeOut();
+    });
+
+    // 成功Toast
+    $("#btn-toast-success").click(function() {
+        $("#toast-success").show().delay(2000).fadeOut();
+    });
+
+    // loading Toast
+    $("#btn-toast-loading").click(function() {
+        $("#toast-loading").show().delay(2000).fadeOut();
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+// Search Bar
+// -------------------------
+.h5ui-searchbar{
+  background: rgba(229,229,232,.95);
+  border-bottom: none !important;
+  position: relative;
+}
+
+.searchbar-content{
+  padding: 7px 10px;
+
+  .h5ui-form-input{
+    height: 32px;
+    padding: 0 10px 0 30px;
+    background: #fff url("../img/icon-search_bar.png?201612081905") 8px 50% no-repeat;
+    background-size: 18px;
+    display: block;
+    border-radius: 3px;
+    font-size: 14px;
+  }
+
+  &.focus{
+    padding: 7px 60px 7px 10px;
+  }
+}
+
+.searchbar-cancel{
+  position: absolute;
+  top: 7px;
+  right: 0;
+  line-height: 32px;
+  font-size: 16px;
+  color: @colorPrimary;
+  width: 60px;
+  text-align: center;
+  display: none;
+}

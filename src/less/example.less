@@ -1,0 +1,201 @@
+// Static URL
+@staticUrl: "http://s.h5ui.io";
+
+// Import Variable & Mixin
+@import "base/variable";
+@import "base/mixin";
+
+
+// Example Home
+// --------------------------------------------------
+.h5ui-page{
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.example-home_hd{
+  padding: 30px 30px 20px;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+  .h5ui-logo{
+    width: 124px; /* 144px */
+    height: 50px;
+    display: block;
+    background: url("@{staticUrl}/img/example/logo.png?201612081905") no-repeat;
+    background-size: 144px;
+    margin: 0 auto;
+  }
+  p{
+    font-size: 14px;
+    padding-top: 7px;
+    color: #999;
+    margin: 0;
+  }
+}
+
+.example-home_grid_hd{
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  margin: 0;
+  padding: 8px 15px;
+}
+
+.example-home_grid_bd{
+  margin-top: 15px;
+  .h5ui-grid_item{
+    color: #999;
+  }
+  .h5ui-grid_item_icon{
+    background: url("@{staticUrl}/img/example/icons.png?2016120081905") no-repeat;
+    background-size: 32px;
+    &.icon-grid_form{
+      background-position: 0 0;
+    }
+    &.icon-grid_slider{
+      background-position: 0 -32px;
+    }
+    &.icon-grid_switch{
+      background-position: 0 -32px * 2;
+    }
+    &.icon-grid_checkbox{
+      background-position: 0 -32px * 3;
+    }
+    &.icon-grid_radio{
+      background-position: 0 -32px * 4;
+    }
+    &.icon-grid_select{
+      background-position: 0 -32px * 5;
+    }
+    &.icon-grid_button{
+      background-position: 0 -32px * 6;
+    }
+    &.icon-grid_navbar{
+      background-position: 0 -32px * 7;
+    }
+    &.icon-grid_tab{
+      background-position: 0 -32px * 8;
+    }
+    &.icon-grid_grid{
+      background-position: 0 -32px * 9;
+    }
+    &.icon-grid_list{
+      background-position: 0 -32px * 10;
+    }
+    &.icon-grid_dialog{
+      background-position: 0 -32px * 11;
+    }
+    &.icon-grid_modal{
+      background-position: 0 -32px * 12;
+    }
+    &.icon-grid_toast{
+      background-position: 0 -32px * 13;
+    }
+    &.icon-grid_toptips{
+      background-position: 0 -32px * 14;
+    }
+    &.icon-grid_alert{
+      background-position: 0 -32px * 15;
+    }
+    &.icon-grid_msg{
+      background-position: 0 -32px * 16;
+    }
+    &.icon-grid_timeline{
+      background-position: 0 -32px * 17;
+    }
+    &.icon-grid_lazyload{
+      background-position: 0 -32px * 18;
+    }
+    &.icon-grid_more{
+      background-position: 0 -32px * 19;
+    }
+
+  }
+}
+
+.example-copyright{
+  padding: 20px 0;
+  display: inline-block;
+  width: 100%;
+  .flag{
+    width: 66px;
+    height: 24px;
+    background: url("@{staticUrl}/img/example/flag.png?201612081905") no-repeat;
+    background-size: 66px;
+    display: block;
+    margin: 0 auto;
+  }
+  &.fixed{
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+  }
+}
+
+// Slider Example
+// --------------------------------------------------
+.example-slider_val{
+  font-size: 15px;
+  color: @colorGray;
+  margin-left: 20px;
+  min-width: 30px;
+  text-align: right;
+  display: block;
+}
+.example-slider_volume_small,
+.example-slider_volume_large{
+  width: 20px;
+  height: 13px;
+  display: block;
+  background: url("@{staticUrl}/img/example/example-slider_volume.png?201612081905") no-repeat;
+  background-size: 20px;
+}
+.example-slider_volume_small{
+  background-position: 0 0;
+  margin: 5px 20px 5px 0;
+}
+.example-slider_volume_large{
+  background-position: 0 -13px;
+  margin: 5px 0 5px 20px;
+}
+
+
+// Grid Example
+// --------------------------------------------------
+.h5ui-grid .h5ui-grid_item .h5ui-grid_item_icon{
+  img{
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+  }
+}
+
+
+// Share Modal Example
+// --------------------------------------------------
+.h5ui-modal_share .modal-body .item{
+  .icon {
+    background: @colorWhite url("http://s.h5ui.io/img/example/icon-share.png?201612081905") no-repeat;
+    background-size: 60px;
+    &.icon-weibo {
+      background-position: 0 0;
+    }
+    &.icon-qq {
+      background-position: 0 -60px;
+    }
+    &.icon-qqzone {
+      background-position: 0 -60px * 2;
+    }
+    &.icon-qqweibo {
+      background-position: 0 -60px * 3;
+    }
+  }
+}
+
+// Tab Example
+.tab-content{
+  font-size: 16px;
+  text-align: center;
+}

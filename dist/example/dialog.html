@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="keywords" content="H5UI,移动UI组件库,H5前端,前端样式库,CSS样式库,H5UI交互设计,前端框架,UI框架,UI-framework,Mobile-front-end,CSS-framework">
+    <meta name="description" content="H5UI-简洁优雅的移动UI组件库">
+
+    <title>确认操作 Dialog</title>
+
+    <link rel="dns-prefetch" href="http://s.h5ui.io">
+    <link rel="shortcut icon" href="http://s.h5ui.io/img/favicon.ico">
+
+    <!-- H5UI CSS -->
+    <link rel="stylesheet" href="../css/h5ui.min.css">
+    <!-- Example CSS -->
+    <link rel="stylesheet" href="../css/example.min.css">
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?849d2590ddf20decb7453afa67c978c0";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</head>
+
+<body ontouchstart>
+
+
+<div class="h5ui-page top">
+
+    <!-- start [lists] -->
+    <div class="h5ui-group">
+
+        <div class="h5ui-group_title">
+            确认操作
+        </div>
+
+        <a class="h5ui-list" href="javascript:void(0);" data-toggle="modal" data-target="#modal-title-two_button">
+            <div class="h5ui-list_bd">标题+双操作</div>
+            <div class="h5ui-list_ft">
+                <i class="h5ui-list_ft_arrow"></i>
+            </div>
+        </a>
+
+        <a class="h5ui-list" href="javascript:void(0);" data-toggle="modal" data-target="#modal-title-content-two_button">
+            <div class="h5ui-list_bd">标题+内容+双操作</div>
+            <div class="h5ui-list_ft">
+                <i class="h5ui-list_ft_arrow"></i>
+            </div>
+        </a>
+
+        <a class="h5ui-list" href="javascript:void(0);" data-toggle="modal" data-target="#modal-title-content-one_button">
+            <div class="h5ui-list_bd">标题+内容+单操作</div>
+            <div class="h5ui-list_ft">
+                <i class="h5ui-list_ft_arrow"></i>
+            </div>
+        </a>
+
+        <a class="h5ui-list" href="javascript:void(0);" data-toggle="modal" data-target="#modal-title-form-two_button">
+            <div class="h5ui-list_bd">标题+输入框+双操作</div>
+            <div class="h5ui-list_ft">
+                <i class="h5ui-list_ft_arrow"></i>
+            </div>
+        </a>
+
+    </div>
+
+    <div class="h5ui-group">
+
+        <div class="h5ui-group_title">
+            长内容操作
+        </div>
+
+        <a class="h5ui-list" href="javascript:void(0);" data-toggle="modal" data-target="#modal-middle">
+            <div class="h5ui-list_bd">长内容操作</div>
+            <div class="h5ui-list_ft">
+                <i class="h5ui-list_ft_arrow"></i>
+            </div>
+        </a>
+
+    </div>
+    <!-- end [lists] -->
+
+</div>
+
+<!-- Copyright -->
+<div class="example-copyright fixed">
+    <a href="../index.html" class="flag"></a>
+</div>
+
+<!-- start [标题+双操作] -->
+<div class="h5ui-dialog" id="modal-title-two_button" tabindex="-1" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog middle">
+        <div class="modal-content">
+            <div class="modal-header">
+                确认要删除评论？
+            </div>
+            <div class="modal-footer clearfix">
+                <a href="javascript:void(0);" class="btn" data-dismiss="modal">取消</a>
+                <button type="button" class="btn active" data-dismiss="modal">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end [标题+双操作] -->
+
+<!-- start [标题+内容+双操作] -->
+<div class="h5ui-dialog" id="modal-title-content-two_button" tabindex="-1" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog middle">
+        <div class="modal-content">
+            <div class="modal-header">
+                温馨提示
+            </div>
+            <div class="modal-body">
+                温馨提示内容
+            </div>
+            <div class="modal-footer clearfix">
+                <a href="javascript:void(0);" class="btn" data-dismiss="modal">取消</a>
+                <button type="button" class="btn active" data-dismiss="modal">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end [标题+内容+双操作] -->
+
+<!-- start [标题+内容+单操作] -->
+<div class="h5ui-dialog" id="modal-title-content-one_button" tabindex="-1" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog middle">
+        <div class="modal-content">
+            <div class="modal-header">
+                提示
+            </div>
+            <div class="modal-body">
+                账号在别的设备上登录，你被迫下线！
+            </div>
+            <div class="modal-footer clearfix">
+                <button type="button" class="btn btn-block active" data-dismiss="modal">知道了</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end [标题+内容+单操作] -->
+
+<!-- start [标题+输入框+双操作] -->
+<div class="h5ui-dialog" id="modal-title-form-two_button" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog middle">
+        <div class="modal-content">
+            <div class="modal-header">
+                请输入网址
+            </div>
+            <div class="modal-body">
+                <div class="form-hairlines">
+                    <input type="text" id="user-name" class="h5ui-form-input" placeholder="http://H5UI.io">
+                </div>
+            </div>
+            <div class="modal-footer clearfix">
+                <a href="javascript:void(0);" class="btn" data-dismiss="modal">取消</a>
+                <button type="submit" class="btn active" data-dismiss="modal">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end [标题+输入框+双操作] -->
+
+<!-- start [长内容操作] -->
+<div class="h5ui-modal" id="modal-middle" tabindex="-1" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog middle">
+        <div class="modal-content clearfix">
+            <div class="modal-header">
+                使用条款协议
+            </div>
+            <div class="modal-body">
+                <p>
+                    本协议适用于您使用苹果的各项服务（“服务”），通过这些服务，您可以购买、获取、许可、租赁或订阅媒体、app（“App”）和其他应用内服务（合称“内容”）。
+                </p>
+                <p>
+                    我们的服务如下：iTunes Store、App Store、iBooks Store、Apple Music和Apple News。您可以创建一个用于使用中国服务的账户，同时表示您指定了居住并纳税的国家（“居住国”），您可以在居住国获取并使用我们的服务。为了使用我们的服务，您需要具备兼容的硬件、软件（推荐使用最新版本，有时必须使用最新版本）和互联网访问能力（可能产生费用）。我们服务的性能可能受这些因素影响。
+                </p>
+                <p>
+                    您必须年满13周岁（或注册程序规定的居住国内的最低年龄）才能创建Apple ID和使用我们的服务。未满13岁的个人账户需要由家长或法定监护人为使用家庭共享功能而创建，或由获准教育机构创建。
+                </p>
+                <p>
+                    服务和部分App允许您以订阅方式购买内容（“付费订阅”）。在账户设置的“管理订阅”部分取消订阅之前，付费订阅自动续展。如果付费订阅价格上涨，我们将通知您，必要时在征得您的同意后才继续提供服务。在最新付费订阅开始前24小时之内，我们将通过您的支付方式收费。在从您的支付方式中扣除订阅费用前，部分付费订阅可提供免费试用。在我们收费前，如果您决定停止付费订阅，请在免费试用结束前取消订阅。
+                </p>
+            </div>
+            <div class="modal-footer">
+                <a href="javascript:void(0);" class="h5ui-btn" data-dismiss="modal">我知道了</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end [长内容操作] -->
+
+<!-- jQuery -->
+<script src="http://s.h5ui.io/js/jquery/jquery.min.js"></script>
+<!-- H5UI JS -->
+<script src="../js/h5ui.min.js"></script>
+
+</body>
+</html>

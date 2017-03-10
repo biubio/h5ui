@@ -1,0 +1,109 @@
+// Button
+// -------------------------
+.h5ui-btn {
+  display: inline-block;
+  padding: 10px 16px;
+  font-size: 17px;
+  margin-bottom: 0;
+  font-weight: normal;
+  line-height: 1.42857143;
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  min-width: 140px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  background-image: none;
+  -webkit-appearance: none;
+  position: relative;
+  width: 100%;
+
+  &:before {
+    .mixin-hairline_full;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+  }
+  &:active{
+    color: inherit;
+    background-image: none;
+  }
+}
+
+.h5ui-btn.disabled,
+.h5ui-btn[disabled],
+fieldset[disabled] .btn {
+  cursor: not-allowed;
+  filter: alpha(opacity=65);
+  opacity: .65;
+}
+
+.btn-outlined{
+ width: auto;
+  display: inline-block;
+}
+
+// Button primary
+.h5ui-btn_primary {
+  color: @colorWhite;
+  background-color: @colorPrimary;
+  &:active{
+    color: @colorWhite;
+    background-color: @colorPrimaryDark;
+  }
+  &.btn-outlined{
+    background: none;
+    color: @colorPrimary;
+    &:before {
+      border-color: @colorPrimary;
+    }
+    &:active{
+      color: @colorPrimaryDark;
+      &:before{
+        border-color: @colorPrimaryDark;
+      }
+    }
+  }
+}
+
+// Button default
+.h5ui-btn_default {
+  color: @colorGrayDarker;
+  background-color: #F7F7F7;
+  position: relative;
+  &:active{
+    background-color: #e8e8e8;
+  }
+  &.btn-outlined{
+    background: none;
+    color: @colorGrayDarker;
+    &:before {
+      border: 1px solid rgba(0,0,0,.20);
+    }
+    &:active{
+      background-color: #F7F7F7;
+    }
+  }
+}
+
+
+// Button danger
+.h5ui-btn_danger {
+  color: @colorWhite;
+  background-color: @colorRed;
+  &:active{
+    color: @colorWhite;
+    background-color: @colorRedDark;
+  }
+}
+
+input[type="submit"].btn-block,
+input[type="reset"].btn-block,
+input[type="button"].btn-block {
+  width: 100%;
+}

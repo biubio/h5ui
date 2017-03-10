@@ -1,0 +1,57 @@
+// Alert
+// -------------------------
+.h5ui-alert{
+  line-height: 2;
+  font-size: 16px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 18888;
+  color: @colorWhite;
+  display: none;
+  padding: 6px 10px;
+  .mixin-animate-fade-in-down(500ms, 0ms, -40px, 0);
+
+  i{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 7px;
+    vertical-align: middle;
+    background: url("../img/icon-alert.png?201612081905") no-repeat;
+    background-size: 20px;
+
+    &.h5ui-alert_success_icon{
+      background-position: 0 0;
+    }
+    &.h5ui-alert_error_icon{
+      background-position: 0 -20px;
+    }
+    &.h5ui-alert_warning_icon{
+      background-position: 0 -40px;
+    }
+  }
+
+  span{
+    vertical-align: middle;
+  }
+
+  &.h5ui-alert_success{
+    background: rgba(67, 172, 67, .95);
+  }
+
+  &.h5ui-alert_error{
+    background: rgba(242, 91, 75, .95);
+  }
+
+  &.h5ui-alert_warning{
+    background: rgba(250, 241, 165, .95);
+    color: @colorGrayDarker;
+    > a{
+      color: @colorGrayDarker;
+      display: block;
+    }
+  }
+}

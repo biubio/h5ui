@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="keywords" content="H5UI,移动UI组件库,H5前端,前端样式库,CSS样式库,H5UI交互设计,前端框架,UI框架,UI-framework,Mobile-front-end,CSS-framework">
+    <meta name="description" content="H5UI-简洁优雅的移动UI组件库">
+
+    <title>滑杆 Slider</title>
+
+    <link rel="dns-prefetch" href="http://s.h5ui.io">
+    <link rel="shortcut icon" href="http://s.h5ui.io/img/favicon.ico">
+
+    <!-- H5UI CSS -->
+    <link rel="stylesheet" href="../css/h5ui.min.css">
+    <!-- Example CSS -->
+    <link rel="stylesheet" href="../css/example.min.css">
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?849d2590ddf20decb7453afa67c978c0";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+
+<body ontouchstart>
+
+<div class="h5ui-page top">
+
+    <div class="h5ui-slider_group">
+        <div class="h5ui-slider_title">
+            支付提示音量
+        </div>
+
+        <div class="h5ui-slider_group_body">
+            <div class="example-slider_volume_small"></div>
+            <!-- start [slider] -->
+            <div class="h5ui-slider">
+                <input id="sliderinner-volume" data-slider-id="sliderinner-volume" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="50"/>
+            </div>
+            <!-- end [slider] -->
+            <div class="example-slider_volume_large"></div>
+        </div>
+    </div>
+
+    <div class="h5ui-slider_group">
+        <div class="h5ui-slider_title">
+            支付额度设置 (元)
+        </div>
+
+        <div class="h5ui-slider_group_body">
+            <!-- start [slider] -->
+            <div class="h5ui-slider">
+                <input id="sliderinner-pay" data-slider-id="sliderinner-pay" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="20"/>
+            </div>
+            <!-- end [slider] -->
+            <span class="example-slider_val" id="example-slider_val">20</span>
+        </div>
+    </div>
+
+    <div class="h5ui-slider_group">
+        <!-- start [slider] -->
+        <div class="h5ui-slider">
+            <input id="sliderinner" data-slider-id="sliderinner" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="70"/>
+        </div>
+        <!-- end [slider] -->
+    </div>
+
+</div>
+
+<!-- Copyright -->
+<div class="example-copyright fixed">
+    <a href="../index.html" class="flag"></a>
+</div>
+
+<!-- jQuery -->
+<script src="http://s.h5ui.io/js/jquery/jquery.min.js"></script>
+<!-- H5UI JS -->
+<script src="../js/h5ui.min.js"></script>
+
+<script>
+    $(' #sliderinner, #sliderinner-volume, #sliderinner-pay').slider();
+
+    $("#sliderinner-pay").on("slide", function(slideEvt) {
+        $("#example-slider_val").text(slideEvt.value);
+    });
+</script>
+
+</body>
+</html>

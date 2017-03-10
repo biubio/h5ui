@@ -1,0 +1,70 @@
+// TimeLine
+// -------------------------
+.h5ui-timeline {
+  .h5ui-timeline_item {
+    position: relative;
+    padding-left: 40px;
+    padding-bottom: 30px;
+    font-size: 16px;
+    color: @colorGrayDark;
+
+    small{
+      display: block;
+      font-size: 13px;
+      color: @colorGray;
+    }
+
+    &:last-child:after{
+      display: none;
+    }
+
+    &:before{
+      position: absolute;
+      content: " ";
+      top: 6px;
+      left: 10px;
+      display: block;
+      width: 11px;
+      height: 11px;
+      background: #EAECEE;
+      border-radius: 50%;
+      z-index: 2;
+    }
+
+    &:after{
+      position: absolute;
+      content: " ";
+      top: 6px;
+      left: 15px;
+      display: block;
+      width: 1px;
+      height: 100%;
+      background: #EAECEE;
+    }
+
+    &.success{
+      color: @colorPrimary;
+      &:after,
+      &:before{
+        background: lighten(@colorPrimary, 8%);
+      }
+    }
+
+    &.active{
+      color: @colorPrimary;
+      font-weight: 600;
+      small{
+        font-weight: 400;
+      }
+      &:before{
+        top: 3px;
+        left: 7px;
+        width: 17px;
+        height: 17px;
+        background: lighten(@colorPrimary, 8%);
+        border: 3px solid lighten(@colorPrimary, 42%);
+      }
+    }
+  }
+}
+

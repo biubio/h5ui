@@ -1,0 +1,75 @@
+// List
+// -------------------------
+.h5ui-list {
+  padding: 12px 15px 12px 15px;
+  vertical-align: middle;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  color: @colorGrayDarker;
+  background: @colorWhite;
+  font-size: 17px;
+
+  &:before{
+    .mixin-hairline_top;
+  }
+
+  &:last-child{
+    &:before {
+      .mixin-hairline_bottom;
+    }
+  }
+}
+
+.h5ui-list_hd {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  display: block;
+}
+
+.h5ui-list_bd{
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.h5ui-list_ft{
+  text-align: right;
+  padding-left: 10px;
+
+  .h5ui-badge{
+    position: relative;
+    top: -1px;
+  }
+  small{
+    font-size: 16px;
+    color: @colorGray;
+  }
+}
+
+.h5ui-list_ft_arrow{
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-bottom: solid 2px rgba(0,0,0,.2);
+  border-right: solid 2px rgba(0,0,0,.2);
+  -webkit-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
+  transform: rotate(315deg);
+  margin-right: 2px;
+  margin-bottom: 1px;
+}
+
+// List Click Hover
+a.h5ui-list:active{
+  background: #F5F5F5;
+}

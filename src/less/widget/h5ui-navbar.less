@@ -1,0 +1,156 @@
+// Navbar
+// -------------------------
+.h5ui-bar {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-color: hsla(0, 0%, 100%, .96);
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 10;
+
+  &.bar-fixed{
+    position: fixed !important;
+    right: 0;
+    left: 0;
+    z-index: 10;
+  }
+}
+
+// header bar
+header{
+  &.h5ui-bar{
+
+    &.bar-fixed{
+      top: 0;
+    }
+
+    &:before {
+      .mixin-hairline_bottom;
+      border-bottom: 1px solid rgba(0,0,0,.10);
+      top: auto;
+      bottom: -1px;
+    }
+    &:before,
+    &:after {
+      content: "";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+
+    .h5ui-bar_title{
+      display: block;
+      font-size: 18px;
+      font-weight: bold;
+      width: 100%;
+      position: absolute;
+      text-align: center;
+      line-height: 46px;
+      margin: 0;
+      padding: 0;
+      white-space: nowrap;
+      a{
+        color: inherit;
+      }
+    }
+
+    .h5ui-bar_item{
+      padding: 0 15px;
+      font-size: 17px;
+      line-height: 46px;
+      position: relative;
+      z-index: 10;
+      color: @colorPrimary;
+      .h5ui-bar_arrow_left{
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-bottom: solid 2px @colorPrimary;
+        border-right: solid 2px @colorPrimary;
+        margin-left: 2px;
+        margin-right: -2px;
+        -webkit-transform: rotate(135deg);
+        -ms-transform: rotate(135deg);
+        transform: rotate(135deg);
+      }
+    }
+  }
+}
+
+// 导航-绿色样式
+header.h5ui-bar {
+  &.bar-green{
+    border: none;
+    background: @colorPrimary;
+    color: @colorWhite;
+    &:before{
+      display: none;
+    }
+    .h5ui-bar_item{
+      color: @colorWhite;
+      .h5ui-bar_arrow_left{
+        border-bottom: solid 2px @colorWhite;
+        border-right: solid 2px @colorWhite;
+      }
+    }
+  }
+}
+
+// footer bar
+footer{
+  &.h5ui-bar {
+    height: 50px;
+    display: table;
+    position: relative;
+
+    &.bar-fixed{
+      bottom: 0;
+    }
+
+    &:before {
+      .mixin-hairline_top;
+      border-top: 1px solid rgba(0,0,0,.10);
+    }
+
+    .h5ui-bar_item{
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      height: inherit;
+      color: @colorGray;
+      font-size: 11px;
+      .h5ui-bar_icon{
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        margin: 3px auto 0;
+        position: relative;
+        .h5ui-badge{
+          position: absolute;
+          top: -2px;
+          right: -10px;
+          &.h5ui-badge_dot{
+            right: -7px;
+          }
+        }
+      }
+      span{
+        display: block;
+        line-height: 1;
+      }
+      &.active{
+        color: @colorPrimary;
+      }
+    }
+  }
+}
+
+// backdrop-filter supports
+@supports (-webkit-backdrop-filter: none) {
+  .h5ui-bar{
+    -webkit-backdrop-filter: blur(18px);
+    background-color: hsla(0, 0%, 100%, .68)
+  }
+}

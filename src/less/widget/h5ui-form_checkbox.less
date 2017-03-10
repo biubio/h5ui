@@ -1,0 +1,138 @@
+// Checkbox & Radio
+.h5ui-checkbox,
+.h5ui-radio{
+  .btn{
+    margin: 0;
+    padding: 12px 15px;
+    font-size: 16px;
+    color: @colorGrayDarker;
+    text-align: left;
+    border-radius: 0;
+    width: 100%;
+    border: none;
+    background: @colorWhite;
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+
+    &:before {
+      .mixin-hairline_top;
+    }
+
+    &:last-child{
+      &:before {
+        .mixin-hairline_bottom;
+      }
+    }
+
+    &:active{
+      background: #F5F5F5;
+    }
+
+  }
+}
+
+.h5ui-checkbox_hd,
+.h5ui-radio_hd{
+  display: block;
+  margin-right: 15px;
+}
+
+.h5ui-checkbox_bd,
+.h5ui-radio_bd{
+  width: 100%;
+  font-size: 16px;
+  display: block;
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+
+  small{
+    color: @colorGray;
+  }
+
+}
+
+.h5ui-radio .btn .h5ui-radio_ft,
+.h5ui-checkbox .btn .h5ui-checkbox_ft{
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+
+  &:after,
+  &:before{
+    position: absolute;
+    display: block;
+    content: "";
+    height: 2px;
+  }
+}
+
+// h5ui-radio
+.h5ui-radio .btn.active .h5ui-radio_ft{
+  &:after{
+    -webkit-transform: rotate(-45deg) translate3d(10px,0,0);
+    -moz-transform: rotate(-45deg) translate3d(10px,0,0);
+    transform: rotate(-45deg) translate3d(10px,0,0);
+    transform: rotate(-45deg) translate3d(10px,0,0);
+    margin-top: 19px;
+    width: 18px;
+    background: @colorPrimary;
+  }
+  &:before{
+    -webkit-transform: rotate(45deg) translate3d(10px,5px,0);
+    -moz-transform: rotate(45deg) translate3d(10px,5px,0);
+    transform: rotate(45deg) translate3d(10px,5px,0);
+    margin-top: 4px;
+    width: 8px;
+    background: @colorPrimary;
+  }
+}
+
+
+// h5ui-checkbox
+.h5ui-checkbox .btn .h5ui-checkbox_ft{
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  background: @colorWhite;
+  border: 1px solid #ddd;
+}
+.h5ui-checkbox .btn.active .h5ui-checkbox_ft{
+  background: @colorPrimary;
+  border-color: @colorPrimary;
+}
+.h5ui-checkbox .btn.active .h5ui-checkbox_ft{
+  &:after{
+    -webkit-transform: rotate(-45deg) translate3d(10px,0,0);
+    -moz-transform: rotate(-45deg) translate3d(10px,0,0);
+    transform: rotate(-45deg) translate3d(10px,0,0);
+    margin-top: 18px;
+    width: 12px;
+    background: @colorWhite;
+  }
+  &:before{
+    -webkit-transform: rotate(45deg) translate3d(11px,4px,0);
+    -moz-transform: rotate(45deg) translate3d(11px,4px,0);
+    transform: rotate(45deg) translate3d(11px,4px,0);
+    margin-top: 2px;
+    width: 5px;
+    background: @colorWhite;
+  }
+}
+
+
+[data-toggle="buttons"] > .btn input[type="radio"],
+[data-toggle="buttons"] > .btn input[type="checkbox"] {
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -5px;
+  top: 0;
+}

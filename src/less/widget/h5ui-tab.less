@@ -1,0 +1,69 @@
+// Tabs
+// -------------------------
+.h5ui-tab{
+  background: @colorWhite;
+  position: relative;
+  width: 100%;
+  display: block;
+
+  &:before {
+    .mixin-hairline_bottom;
+  }
+
+  .tab-item{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+
+    a{
+      display: inline-block;
+      padding: 13px 0;
+      color: @colorGrayDark;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .active{
+      position: relative;
+      bottom: 0;
+      a{
+        border-bottom: 2px solid @colorPrimary;
+        padding: 12px 0 11px;
+        color: @colorPrimary;
+        position: relative;
+      }
+    }
+
+    li{
+      display: table-cell;
+      width: 1%;
+      text-align: center;
+      position: relative;
+      .badge{
+        padding: 0 4px;
+        position: relative;
+        top: -1px;
+        margin-left: 2px;
+      }
+      small{
+        color: @colorGray;
+      }
+    }
+  }
+
+  &.tab-fixed{
+    position: fixed !important;
+    right: 0;
+    left: 0;
+    z-index: 10;
+  }
+}
+
+// tab content
+.tab-content > .tab-pane {
+  display: none;
+}
+.tab-content > .active {
+  display: block;
+}

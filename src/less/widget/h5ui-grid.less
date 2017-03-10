@@ -1,0 +1,42 @@
+// Grid
+// -------------------------
+.h5ui-grid{
+  .h5ui-grid_item{
+    width: 33.3333%;
+    background: @colorWhite;
+    display: block;
+    text-align: center;
+    float: left;
+    padding: 20px 0;
+    color: @colorGrayDark;
+    font-size: 14px;
+    position: relative;
+
+    &:after{
+      .mixin-hairline_right;
+    }
+    &:before{
+      .mixin-hairline_top;
+    }
+
+    .h5ui-grid_item_icon{
+      width: 32px;
+      height: 32px;
+      display: block;
+      margin: 10px auto 5px;
+    }
+    &:active{
+      background: #F5F5F5;
+    }
+    &:nth-child(3n){
+      &:after{
+        border-right: none;
+      }
+    }
+    &:nth-last-child(-n+3){
+      &:before{
+        .mixin-hairline_bottom;
+      }
+    }
+  }
+}

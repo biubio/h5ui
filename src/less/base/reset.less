@@ -1,0 +1,116 @@
+// Reset styles
+// --------------------------------------------------
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: @backgroundPrimary;
+  font-family: @fontFamilyPrimary;
+  color: @colorGrayDarker;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1.41176471;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  position: relative;
+  text-align: left;
+}
+
+a {
+  color: @colorGrayDarker;
+  text-decoration: none;
+}
+
+a,
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  outline: 0;
+}
+
+textarea{
+  resize: none;
+  vertical-align: middle;
+}
+
+img {
+  border: 0;
+}
+
+small {
+  font-size: 80%;
+}
+
+// Clearfix
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+// Disabled
+.disabled, [disabled] {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+// Float
+.pull-left {
+  float: left !important;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+// Text Align
+.text-center{
+  text-align: center !important;
+}
+.text-left{
+  text-align: left !important;
+}
+.text-right{
+  text-align: right !important;
+}
+
+// Page
+.h5ui-page{
+  &.top{
+    padding-top: 15px;
+  }
+  &.bottom{
+    padding-bottom: 15px;
+  }
+  &.spacing{
+    padding: 0 15px;
+  }
+  &.spacing-cell{
+    padding: 15px;
+  }
+}

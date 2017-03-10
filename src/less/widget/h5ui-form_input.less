@@ -1,0 +1,118 @@
+// Form
+// -------------------------
+.h5ui-form{
+  background: @colorWhite;
+  position: relative;
+
+  &:before {
+    .mixin-hairline_top;
+  }
+
+  &:last-child{
+    &:before {
+      .mixin-hairline_bottom;
+    }
+  }
+}
+
+.h5ui-form-label{
+  width: 100px;
+  padding: 14px 0 14px 15px;
+  line-height: 1.1333;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  color: @colorGrayDarker;
+  position: absolute;
+}
+
+.h5ui-form-input{
+  width: 100%;
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  color: @colorGrayDarker;
+  padding: 10px 15px 10px 100px;
+  background: @colorWhite;
+}
+
+.h5ui-input-cell{
+  float: none;
+  width: 100%;
+  padding: 11px 15px;
+  position: static;
+  small{
+    color: @colorGray;
+  }
+}
+
+
+.h5ui-form-static {
+  font-size: 16px;
+  width: 100%;
+  padding: 12px 10px 12px 100px;
+  margin-bottom: 0;
+}
+
+.h5ui-form-input_tip{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  font-size: 16px;
+  line-height: 1.1333;
+  color: @colorGrayDark;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  padding: 0 15px;
+
+  .code-btn{
+    padding: 14px 0;
+    display: block;
+    color: @colorPrimary;
+
+    &:before{
+      .mixin-hairline_left;
+    }
+  }
+}
+
+
+.h5ui-form-error{
+  .h5ui-form-label{
+    color: @colorRed;
+  }
+  .icon-form_error{
+    width: 16px;
+    height: 16px;
+    background: url("../img/icon-error.png?201612131627") 0 0 no-repeat;
+    background-size: 16px;
+    display: block;
+  }
+}
+
+.h5ui-form_tip{
+  font-size: 13px;
+  padding: 0 15px;
+  color: @colorGray;
+  position: relative;
+  top: -10px;
+}
+
+input[disabled] {
+  background: @colorWhite;
+}
+
+// placeholder
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder{
+  color: @colorGrayLight;
+}

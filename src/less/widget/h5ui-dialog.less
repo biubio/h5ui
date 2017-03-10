@@ -1,0 +1,183 @@
+@import "../base/mixin/mixin-modal";
+
+// 确认操作
+// --------------------------------------------------
+.h5ui-dialog{
+  .mixin-modal;
+
+  .modal-header{
+    .mixin-modal-header;
+  }
+
+  .modal-body{
+    .mixin-modal-body;
+  }
+
+  .modal-dialog {
+    .mixin-modal-dialog;
+    padding: 0 15px;
+    top: 30%;
+    .mixin-animate-bounce-in(300ms, 0ms, .5, 1);
+  }
+
+  .modal-content {
+    .mixin-modal-content;
+
+    border-radius: 4px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .modal-footer {
+    padding: 0;
+    position: relative;
+
+    &:before {
+      .mixin-hairline_top;
+    }
+
+    .btn{
+      margin: 0;
+      border: none;
+      background: none;
+      padding: 12px;
+      width: 50%;
+      text-align: center;
+      float: left;
+      color: @colorGrayDarker;
+      font-size: 17px;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 0;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      box-shadow: none;
+      position: relative;
+      &:before{
+        display: none;
+      }
+      &.active{
+        color: @colorPrimary;
+        font-weight: 600;
+      }
+      &:active{
+        background: rgba(0,0,0,.05);
+      }
+    }
+    .btn + .btn{
+      margin-left: 0;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 4px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      &:after{
+        .mixin-hairline_left;
+      }
+    }
+    .btn-block{
+      width: 100%;
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+  }
+  .h5ui-form-input{
+    height: 36px;
+    padding: 8px 10px;
+  }
+}
+
+.form-hairlines{
+  position: relative;
+  &:before {
+    .mixin-hairline_full;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+  }
+  input,
+  textarea{
+    border: none;
+    border-radius: 4px;
+  }
+}
+
+
+// 长内容操作
+// --------------------------------------------------
+.h5ui-modal{
+  .mixin-modal;
+
+  .modal-header{
+    .mixin-modal-header;
+
+    padding: 15px 15px 10px;
+  }
+
+  .modal-content {
+    .mixin-modal-content;
+
+    border-radius: 4px;
+    max-width: 320px;
+    margin: 15px auto;
+    background: @colorWhite;
+  }
+
+  .modal-dialog {
+    .mixin-modal-dialog;
+
+    padding: 0 15px;
+    top: 8%;
+    .mixin-animate-bounce-in(300ms, 0ms, .5, 1);
+  }
+
+
+  .modal-body{
+    .mixin-modal-body;
+    padding: 0 15px;
+    max-height: 320px;
+    overflow-y: auto;
+    text-align: left;
+    @media (max-width: 375px) {
+      max-height: 280px;
+    }
+    @media (max-width: 320px) {
+      max-height: 240px;
+    }
+    p{
+      margin-top: 0;
+    }
+  }
+
+  .modal-footer{
+    padding: 0;
+    text-align: center;
+    position: relative;
+    &:before {
+      .mixin-hairline_top;
+    }
+
+    &:after{
+      content: " ";
+      position: absolute;
+      top: -20px;
+      left: 0;
+      width: 97%;
+      height: 20px;
+      background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAUCAYAAADPym6aAAAAAXNSR0IArs4c6QAAAKVJREFUSA3tltEKgCAMRc0KKqKi+oz+//Oy3QehXpyYwRwNBMM7vcc5qHLOHUZBNMTQKeAwABm1gEw/iKAbwNNaBflJtgKQLTmbTzxJYm8yfH8RFiB7YGfuYG+S0wWOyLP0dUXyuIzYRRXIEgEsXoKKDDRq8U4ZgwDpafimZeSPZeSKCZiZxbh5YQQgan4ai+8PFBIVaTEpPQCS0ujiuFVA4FbVgFxHFwhNXnJVIwAAAABJRU5ErkJggg==") repeat-x;
+    }
+
+    .h5ui-btn{
+      color: @colorPrimary;
+      font-weight: 600;
+      border-radius: 0;
+      padding: 12px 15px;
+      &:before{
+        display: none;
+      }
+
+      &:active{
+        background: #F5F5F5;
+      }
+    }
+  }
+}

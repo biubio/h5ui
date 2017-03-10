@@ -1,0 +1,45 @@
+// Select
+// -------------------------
+.h5ui-select{
+  position: relative;
+  width: 100%;
+  padding-left: 100px;
+  > select{
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    border: 0;
+    outline:0;
+    width: 100%;
+    padding: 0;
+    height: 40px;
+    font-size: 16px;
+    margin: 2px 0;
+    background: @colorWhite;
+    color: @colorGrayDarker;
+  }
+  &:after {
+    content: "";
+    top: 15px;
+    right: 17px;
+    position: absolute;
+    display: inline-block;
+    font-size: 0;
+    border-top: 2px solid rgba(0,0,0,.2);
+    border-left: 2px solid rgba(0,0,0,.2);
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+    -webkit-transform: rotate(225deg);
+  }
+
+  &.select-cell{
+    padding-left: 15px;
+  }
+
+  &.date-select{
+    position: static;
+    padding-left: 0;
+    min-height: 44px;
+  }
+}

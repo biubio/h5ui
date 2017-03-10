@@ -1,0 +1,205 @@
+// 滑杆Slider
+// --------------------------------------------------
+.h5ui-slider{
+  padding: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+
+  .slider {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+  }
+
+  .slider.slider-horizontal,
+  .slider.slider-horizontal .slider-track {
+    width: 100%;
+    height: 6px;
+  }
+  .slider.slider-horizontal .slider-selection,
+  .slider.slider-horizontal .slider-track-low,
+  .slider.slider-horizontal .slider-track-high {
+    height: 100%;
+  }
+  .slider.slider-horizontal .slider-tick,
+  .slider.slider-horizontal .slider-handle {
+    margin-left: -10px;
+  }
+  .slider.slider-horizontal .slider-tick.triangle,
+  .slider.slider-horizontal .slider-handle.triangle {
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    border-width: 0 10px 10px 10px;
+    width: 0;
+    height: 0;
+    border-bottom-color: @colorPrimary;
+    margin-top: 0;
+  }
+  .slider.slider-horizontal .slider-tick-container {
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .slider.slider-horizontal .slider-tick-label-container {
+    white-space: nowrap;
+    margin-top: 20px;
+  }
+  .slider.slider-horizontal .slider-tick-label-container .slider-tick-label {
+    padding-top: 4px;
+    display: inline-block;
+    text-align: center;
+  }
+  .slider.slider-vertical {
+    height: 210px;
+    width: 20px;
+  }
+  .slider.slider-vertical .slider-track {
+    width: 10px;
+    height: 100%;
+    left: 25%;
+
+  }
+  .slider.slider-vertical .slider-selection {
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
+  .slider.slider-vertical .slider-track-low,
+  .slider.slider-vertical .slider-track-high {
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+  .slider.slider-vertical .slider-tick,
+  .slider.slider-vertical .slider-handle {
+    //margin-top: -10px;
+  }
+  .slider.slider-vertical .slider-tick.triangle,
+  .slider.slider-vertical .slider-handle.triangle {
+    border-width: 10px 0 10px 10px;
+    width: 1px;
+    height: 1px;
+    border-left-color: @colorPrimaryDarker;
+    margin-left: 0;
+  }
+  .slider.slider-vertical .slider-tick-label-container {
+    white-space: nowrap;
+  }
+  .slider.slider-vertical .slider-tick-label-container .slider-tick-label {
+    padding-left: 4px;
+  }
+
+  .slider input {
+    display: none;
+  }
+  .slider .tooltip.top {
+    display: none;
+  }
+  .slider .tooltip-inner {
+    white-space: nowrap;
+    max-width: none;
+  }
+  .slider .hide {
+    display: none;
+  }
+  .slider-track {
+    position: absolute;
+    cursor: pointer;
+    background: #F5F5F5;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+  }
+  .slider-selection {
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.10);
+    -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.10);
+    border-radius: 4px;
+    background-color: @colorPrimary;
+  }
+
+  .slider-track-low,
+  .slider-track-high {
+    position: absolute;
+    background: transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+  .slider-handle {
+    position: absolute;
+    top: -12px;
+    width: 30px;
+    height: 30px;
+    background: @colorWhite;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@colorWhite), to(#f9f9f9));
+    background-image: -webkit-linear-gradient(top, @colorWhite, #f9f9f9);
+    background-image: linear-gradient(to bottom, @colorWhite, #f9f9f9);
+    background-repeat: repeat-x;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+    &:before,
+    &:after{
+      width: 2px;
+      height: 12px;
+      display: block;
+      background: rgba(0, 0, 0, .25);
+      content: "";
+      position: absolute;
+      top: 9px;
+    }
+    &:before{
+      left: 11px;
+    }
+    &:after{
+      left: 17px;
+    }
+  }
+  .slider-handle.round {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+  }
+  .slider-handle.triangle {
+    background: transparent none;
+  }
+}
+
+// Slider Title
+.h5ui-slider_title{
+  margin: 0;
+  padding-bottom: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  color: @colorGray;
+  background: @colorWhite;
+  position: relative;
+  top: -5px;
+}
+
+// Slider Group
+.h5ui-slider_group{
+  background: @colorWhite;
+  position: relative;
+  padding: 20px;
+  margin-bottom: 15px;
+  &:before {
+    .mixin-hairline_bottom;
+  }
+  &:after {
+    .mixin-hairline_top;
+  }
+}
+
+.h5ui-slider_group_body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}

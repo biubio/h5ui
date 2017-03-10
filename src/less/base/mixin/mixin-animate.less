@@ -1,0 +1,54 @@
+// Mixin Animate
+// --------------------------------------------------
+
+// fadeIn Up
+.mixin-animate-fade-in-up(@time-A, @time-B, @Y-start, @Y-end) {
+
+  -webkit-animation:fade-in-up @time-A @time-B ease-in-out both;
+  animation:fade-in-up @time-A @time-B ease-in-out both;
+
+  @-webkit-keyframes fade-in-up {
+    0% {
+      -webkit-transform: translateY(@Y-start);
+      transform: translateY(@Y-start);
+    }
+    100% {
+      -webkit-transform: translateY(@Y-end);
+      transform: translateY(@Y-end)
+    }
+  }
+}
+
+// fadeIn Down
+.mixin-animate-fade-in-down(@time-A, @time-B, @Y-start, @Y-end) {
+
+  -webkit-animation:fade-in-down @time-A @time-B ease both;
+  animation:fade-in-down @time-A @time-B ease both;
+
+  @-webkit-keyframes fade-in-down {
+    0% {
+      -webkit-transform: translateY(@Y-start)
+    }
+    100% {
+      -webkit-transform: translateY(@Y-end)
+    }
+  }
+}
+
+// bounce In
+.mixin-animate-bounce-in(@time-A, @time-B, @Y-start, @Y-end) {
+
+  -webkit-animation:bounce-in @time-A @time-B ease both;
+  animation:bounce-in @time-A @time-B ease both;
+
+  @-webkit-keyframes bounce-in {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale(@Y-start)
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: scale(@Y-end)
+    }
+  }
+}

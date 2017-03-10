@@ -1,0 +1,83 @@
+// Msg Page
+// -------------------------
+.h5ui-msg{
+  min-height: 100%;
+  height: auto !important;
+  background: @colorWhite;
+  overflow-y: auto;
+}
+
+.h5ui-msg_content{
+  text-align: center;
+  padding: 15px;
+  display: block;
+
+  .h5ui-msg_icon{
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 30px auto;
+  }
+
+  h4{
+    font-size: 20px;
+    margin: 5px 10px;
+    color: @colorGrayDarker;
+    font-weight: 400;
+  }
+
+  p{
+    font-size: 14px;
+    line-height: 1.4;
+    color: @colorGray;
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
+
+  .h5ui-btn{
+    margin-top: 15px;
+  }
+
+}
+
+// Msgpage icons
+.h5ui-msg_icon{
+  background: url("../img/icon-msg.png?201612081905") no-repeat;
+  background-size: 100px;
+}
+
+
+// Msgpage Success
+.h5ui-msg_success{
+  .h5ui-msg_icon{
+    background-position: 0 0;
+  }
+}
+
+// Msgpage Error
+.h5ui-msg_error{
+  .h5ui-msg_icon{
+    background-position: 0 -100px;
+  }
+}
+
+// Msgpage loading
+.h5ui-msg_loading{
+  .h5ui-msg_icon{
+    background-position: 0 -200px;
+  }
+}
+
+// Msgpage Failure
+.h5ui-msg_failure{
+  min-height: inherit;
+  background: none;
+  overflow-y: auto;
+  .h5ui-msg_icon{
+    width: 100px;
+    height: 100px;
+    background: url("../img/icon-msg_failure.png?201612061623") no-repeat;
+    background-size: 100px;
+    margin: 100px auto 10px;
+  }
+}

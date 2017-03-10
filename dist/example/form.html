@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="keywords" content="H5UI,移动UI组件库,H5前端,前端样式库,CSS样式库,H5UI交互设计,前端框架,UI框架,UI-framework,Mobile-front-end,CSS-framework">
+    <meta name="description" content="H5UI-简洁优雅的移动UI组件库">
+
+    <title>表单 Forms</title>
+
+    <link rel="dns-prefetch" href="http://s.h5ui.io">
+    <link rel="shortcut icon" href="http://s.h5ui.io/img/favicon.ico">
+
+    <!-- H5UI CSS -->
+    <link rel="stylesheet" href="../css/h5ui.min.css">
+    <!-- Example CSS -->
+    <link rel="stylesheet" href="../css/example.min.css">
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?849d2590ddf20decb7453afa67c978c0";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</head>
+
+<body ontouchstart>
+
+<div class="h5ui-page top">
+
+    <!-- start [input] -->
+    <div class="h5ui-group">
+
+        <h5 class="h5ui-group_title">
+            表单输入
+        </h5>
+
+        <div class="h5ui-form">
+            <label for="username" class="h5ui-form-label">表单标题</label>
+            <input type="text" id="username" class="h5ui-form-input" placeholder="占位输入提示">
+        </div>
+
+        <div class="h5ui-form">
+            <label for="email" class="h5ui-form-label">Email</label>
+            <input type="email" id="email" class="h5ui-form-input" placeholder="youname@gmail.com">
+        </div>
+
+        <div class="h5ui-form">
+            <label for="password" class="h5ui-form-label">密码表单</label>
+            <input type="password" id="password" class="h5ui-form-input" placeholder="设置登录密码">
+        </div>
+
+        <div class="h5ui-form">
+            <label class="h5ui-form-label">详细地址</label>
+            <textarea rows="3" class="h5ui-form-input" placeholder="请输入详细地址"></textarea>
+        </div>
+
+    </div>
+
+    <div class="h5ui-group">
+
+        <h5 class="h5ui-group_title">
+            输入错误
+        </h5>
+
+        <div class="h5ui-form h5ui-form-error">
+            <label for="" class="h5ui-form-label">表单标题</label>
+            <input type="text" id="" class="h5ui-form-input" placeholder="占位输入提示">
+            <span class="h5ui-form-input_tip">
+                <i class="icon-form_error"></i>
+            </span>
+        </div>
+
+    </div>
+    <!-- end [input] -->
+
+    <div class="h5ui-group">
+
+        <h5 class="h5ui-group_title">
+            输入扩展
+        </h5>
+
+        <div class="h5ui-form">
+            <label for="money" class="h5ui-form-label">金额表单</label>
+            <input type="number" pattern="[0-9]*" id="money" class="h5ui-form-input" placeholder="请输入金额">
+            <span class="h5ui-form-input_tip">元</span>
+        </div>
+
+        <div class="h5ui-form">
+            <label for="phone" class="h5ui-form-label">手机号</label>
+            <input type="number" pattern="[0-9]*" id="phone" class="h5ui-form-input" placeholder="请输入手机号">
+            <span class="h5ui-form-input_tip">
+                <a href="" class="code-btn">获取验证码</a>
+            </span>
+        </div>
+
+    </div>
+
+    <div class="h5ui-group">
+
+        <h5 class="h5ui-group_title">
+            只读表单
+        </h5>
+
+        <div class="h5ui-form">
+            <label for="user-email" class="h5ui-form-label">只读表单</label>
+            <input type="text" id="user-email" class="h5ui-form-input" readonly="readonly" value="我是只读表单 readonly" placeholder="">
+        </div>
+
+        <div class="h5ui-form">
+            <label for="user-email" class="h5ui-form-label">只读表单</label>
+            <div class="h5ui-form-static">
+                我是纯文本
+            </div>
+        </div>
+
+    </div>
+    <!-- end [input] -->
+
+    <!-- start [cell input] -->
+    <div class="h5ui-group">
+
+        <h5 class="h5ui-group_title">
+            长内容表单
+        </h5>
+
+        <div class="h5ui-form">
+            <input type="text" id="title" class="h5ui-form-input h5ui-input-cell" placeholder="填写项目标题">
+        </div>
+
+        <div class="h5ui-form">
+            <textarea name="detail" class="h5ui-form-input h5ui-input-cell" placeholder="填写项目内容" rows="5"></textarea>
+        </div>
+
+    </div>
+    <!-- end [cell input] -->
+
+    <!-- start [uploader form] -->
+    <div class="h5ui-group h5ui-uploader">
+        <h5 class="h5ui-uploader_title">
+            图片上传标题
+        </h5>
+        <ul class="h5ui-uploader_files">
+            <li class="h5ui-uploader_files_item">
+                <a href="">
+                    <img src="http://s.h5ui.io/img/example/example.png" width="100%" height="100%" title="H5UI">
+                </a>
+            </li>
+            <li class="h5ui-uploader_files_item">
+                <a href="">
+                    <img src="http://s.h5ui.io/img/example/example.png" width="100%" height="100%" title="H5UI">
+                </a>
+            </li>
+        </ul>
+        <div class="h5ui-uploader_btn">
+            <div class="h5ui-uploader_btn_border"></div>
+            <input id="" type="file" multiple="" accept="image/jpeg,image/png,image/bmp">
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="h5ui-form_tip">
+        我是表单说明文字，建议上传高清无码图片。
+    </div>
+    <!-- end [uploader form] -->
+
+</div>
+
+<!-- Copyright -->
+<div class="example-copyright">
+    <a href="../index.html" class="flag"></a>
+</div>
+
+<!-- jQuery -->
+<script src="http://s.h5ui.io/js/jquery/jquery.min.js"></script>
+<!-- H5UI JS -->
+<script src="../js/h5ui.min.js"></script>
+
+</body>
+</html>

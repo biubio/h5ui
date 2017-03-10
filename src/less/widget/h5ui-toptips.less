@@ -1,0 +1,59 @@
+// TopTips
+// -------------------------
+
+.h5ui-toptips{
+  font-size: 14px;
+  width: 100%;
+  z-index: 18888;
+  padding: 10px;
+  .mixin-animate-fade-in-down(500ms, 0ms, -40px, 0);
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+
+  &:before {
+    .mixin-hairline_bottom;
+    border-bottom: 1px solid rgba(0,0,0,.07);
+  }
+
+  i{
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin-right: 7px;
+    background: url("../img/icon-error.png?201612131627") no-repeat;
+    background-size: 16px;
+    overflow: hidden;
+
+    &.h5ui-toptips_error_icon{
+      background-position: 0 0;
+    }
+
+    &.h5ui-toptips_warning_icon{
+      background-position: 0 -20px;
+    }
+
+  }
+
+
+
+  &.h5ui-toptips_warning{
+    background: #FEFCEC;
+    color: #E5A025;
+    > a{
+      color: #E5A025;
+    }
+  }
+
+  &.h5ui-toptips_error{
+    background: #FDEDEE;
+    color: #EC5055;
+    > a{
+      color: #EC5055;
+    }
+  }
+}

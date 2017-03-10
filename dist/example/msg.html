@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="keywords" content="H5UI,移动UI组件库,H5前端,前端样式库,CSS样式库,H5UI交互设计,前端框架,UI框架,UI-framework,Mobile-front-end,CSS-framework">
+    <meta name="description" content="H5UI-简洁优雅的移动UI组件库">
+
+    <title>结果页</title>
+
+    <link rel="dns-prefetch" href="http://s.h5ui.io">
+    <link rel="shortcut icon" href="http://s.h5ui.io/img/favicon.ico">
+
+    <!-- H5UI CSS -->
+    <link rel="stylesheet" href="../css/h5ui.min.css">
+    <!-- Example CSS -->
+    <link rel="stylesheet" href="../css/example.min.css">
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?849d2590ddf20decb7453afa67c978c0";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+
+<body ontouchstart="">
+
+<div id="msgpage-select">
+
+    <div class="h5ui-page top">
+
+        <!-- start [lists] -->
+        <div class="h5ui-group">
+
+            <div class="h5ui-group_title">
+                结果页
+            </div>
+
+            <a class="h5ui-list" href="javascript:void(0);" id="btn-msgpage-success">
+                <div class="h5ui-list_bd">成功结果页</div>
+                <div class="h5ui-list_ft">
+                    <i class="h5ui-list_ft_arrow"></i>
+                </div>
+            </a>
+
+            <a class="h5ui-list" href="javascript:void(0);" id="btn-msgpage-error">
+                <div class="h5ui-list_bd">失败结果页</div>
+                <div class="h5ui-list_ft">
+                    <i class="h5ui-list_ft_arrow"></i>
+                </div>
+            </a>
+
+            <a class="h5ui-list" href="javascript:void(0);" id="btn-msgpage-loading">
+                <div class="h5ui-list_bd">等待结果页</div>
+                <div class="h5ui-list_ft">
+                    <i class="h5ui-list_ft_arrow"></i>
+                </div>
+            </a>
+
+        </div>
+        <!-- end [lists] -->
+
+        <!-- start [lists] -->
+        <div class="h5ui-group">
+            <div class="h5ui-group_title">
+                页面状态页
+            </div>
+
+            <a class="h5ui-list" href="javascript:void(0);" id="btn-msgpage-failure">
+                <div class="h5ui-list_bd">页面加载失败</div>
+                <div class="h5ui-list_ft">
+                    <i class="h5ui-list_ft_arrow"></i>
+                </div>
+            </a>
+        </div>
+        <!-- end [lists] -->
+
+    </div>
+</div>
+
+<!-- Copyright -->
+<div class="example-copyright fixed">
+    <a href="../index.html" class="flag"></a>
+</div>
+
+<!-- start [Msgpage Success] -->
+<div class="h5ui-msg h5ui-msg_success" id="msgpage-success" style="display: none;">
+    <div class="h5ui-msg_content">
+        <i class="h5ui-msg_icon"></i>
+        <h4>操作成功</h4>
+        <p>我是超级无敌文字说明</p>
+
+        <a href="" class="h5ui-btn h5ui-btn_primary">主操作</a>
+        <a href="" class="h5ui-btn h5ui-btn_default">次要操作</a>
+    </div>
+</div>
+<!-- end [Msgpage Success] -->
+
+<!-- start [Msgpage Error] -->
+<div class="h5ui-msg h5ui-msg_error" id="msgpage-error" style="display: none;">
+    <div class="h5ui-msg_content">
+        <i class="h5ui-msg_icon"></i>
+        <h4>操作失败</h4>
+        <p>我是超级无敌文字说明</p>
+
+        <a href="" class="h5ui-btn h5ui-btn_primary">主操作</a>
+        <a href="" class="h5ui-btn h5ui-btn_default">次要操作</a>
+    </div>
+</div>
+<!-- end [Msgpage Error] -->
+
+<!-- start [Msgpage loading] -->
+<div class="h5ui-msg h5ui-msg_loading" id="msgpage-loading" style="display: none;">
+    <div class="h5ui-msg_content">
+        <i class="h5ui-msg_icon"></i>
+        <h4>操作等待中</h4>
+        <p>我是超级无敌文字说明</p>
+
+        <a href="" class="h5ui-btn h5ui-btn_primary">主操作</a>
+        <a href="" class="h5ui-btn h5ui-btn_default">次要操作</a>
+    </div>
+</div>
+<!-- end [Msgpage loading] -->
+
+<!-- start [Msgpage Failure] -->
+<div class="h5ui-msg h5ui-msg_failure" id="msgpage-failure" style="display: none;">
+    <div class="h5ui-msg_content">
+        <i class="h5ui-msg_icon"></i>
+        <p>网络不太给力哦~</p>
+        <a href="" class="h5ui-btn h5ui-btn_primary btn-outlined">重试</a>
+    </div>
+</div>
+<!-- end [Msgpage Failure] -->
+
+<!-- jQuery -->
+<script src="http://s.h5ui.io/js/jquery/jquery.min.js"></script>
+<!-- H5UI JS -->
+<script src="../js/h5ui.min.js"></script>
+
+<script>
+
+    // 成功提示页
+    $("#btn-msgpage-success").click(function(){
+        $("#msgpage-select").toggle();
+        $("#msgpage-success").toggle();
+    });
+
+    // 错误提示页
+    $("#btn-msgpage-error").click(function(){
+        $("#msgpage-select").toggle();
+        $("#msgpage-error").toggle();
+    });
+
+    // 错误提示页
+    $("#btn-msgpage-loading").click(function(){
+        $("#msgpage-select").toggle();
+        $("#msgpage-loading").toggle();
+    });
+
+    // 空内容页
+    $("#btn-msgpage-empty").click(function(){
+        $("#msgpage-select").toggle();
+        $("#msgpage-empty").toggle();
+    });
+
+    // 加载失败
+    $("#btn-msgpage-failure").click(function(){
+        $("#msgpage-select").toggle();
+        $("#msgpage-failure").toggle();
+    });
+
+</script>
+
+</body>
+</html>

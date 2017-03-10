@@ -1,0 +1,65 @@
+// 数据加载
+// -------------------------
+.h5ui-loading{
+  font-size: 13px;
+  text-align: center;
+  display: block;
+  margin: 15px 0;
+  color: @colorGrayDark;
+
+  a{
+    color: @colorGrayDark;
+    display: block;
+  }
+
+  span.loading-line{
+    text-align: center;
+    background: @backgroundPrimary;
+    display: inline-block;
+    position: relative;
+    top: 10px;
+    padding: 0 20px;
+    &:before,
+    &:after{
+      content: " ";
+      position: absolute;
+      top: 6px;
+      width: 5px;
+      height: 5px;
+      background: #E5E8EC;
+      border-radius: 50px;
+    }
+    &:before{
+      left: 0;
+    }
+    &:after{
+      right: 0;
+    }
+  }
+
+  // 数据加载中
+  &.processing{
+    span{
+      vertical-align: middle;
+    }
+    .loading-processing_icon{
+      width: 16px;
+      height: 16px;
+      margin-right: 5px;
+      display: inline-block;
+      vertical-align: middle;
+      background: url("../img/icon-loading_processing.gif?201612131805") no-repeat;
+      background-size: 16px;
+    }
+  }
+  // 数据加载失败 & 成功
+  &.success,
+  &.error{
+    border-bottom: 1px solid #E5E8EC;
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    color: @colorGray;
+  }
+}
