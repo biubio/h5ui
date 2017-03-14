@@ -8,7 +8,6 @@ var header      = require('gulp-header');                   // 添加文件头
 var cssnano     = require('gulp-cssnano');                  // css压缩
 var csslint     = require('gulp-csslint');                  // css规范检测
 var rename      = require('gulp-rename');                   // 文件更名
-var zip         = require('gulp-zip');                      // zip文件压缩
 
 
 // 文件头申明
@@ -60,21 +59,12 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('./dist/js')); // 输出压缩文件存放目录
 });
 
-
-// zip文件压缩[任务]
-gulp.task('zip', function() {
-    return gulp.src(['./**/*', '!./download'])
-        .pipe(zip('h5ui.zip'))
-        .pipe(gulp.dest('./download/'));
-});
-
-
 // 监听文件[任务]
 gulp.task('watch', function() {
-    gulp.watch('./src/less/**/*.less', ['less', 'zip']);
-    gulp.watch('./src/js/**/*.js', ['scripts', 'zip']);
+    gulp.watch('./src/less/**/*.less', ['less']);
+    gulp.watch('./src/js/**/*.js', ['scripts']);
 });
 
 
 // 默认执行任务
-gulp.task('default', ['scripts', 'less', 'zip', 'watch']);
+gulp.task('default', ['scripts', 'less', 'watch']);

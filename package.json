@@ -27,7 +27,6 @@
     "gulp-jshint": "^2.0.1",
     "gulp-less": "^3.1.0",
     "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^1.5.3",
-    "gulp-zip": "^3.2.0"
+    "gulp-uglify": "^1.5.3"
   }
 }

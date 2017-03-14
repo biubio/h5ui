@@ -2454,10 +2454,9 @@ footer.h5ui-bar .h5ui-bar_item.active {
 .h5ui-agree .h5ui-agree_icon {
   width: 14px;
   height: 14px;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
   display: inline-block;
   vertical-align: middle;
+  background: url("../img/icon-agree.png?201703141454") no-repeat;
   background-size: 14px;
   margin-right: 5px;
 }
