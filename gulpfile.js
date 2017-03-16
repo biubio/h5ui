@@ -6,7 +6,6 @@ var jshint      = require('gulp-jshint');                   // js语法检查
 var less        = require('gulp-less');                     // less编译
 var header      = require('gulp-header');                   // 添加文件头
 var cssnano     = require('gulp-cssnano');                  // css压缩
-var csslint     = require('gulp-csslint');                  // css规范检测
 var rename      = require('gulp-rename');                   // 文件更名
 
 
@@ -14,7 +13,7 @@ var rename      = require('gulp-rename');                   // 文件更名
 var banner = [
     '/**',
     ' * H5UI (http://h5ui.io)',
-    ' * Copyright (C) 2017 H5UI.io',
+    ' * Copyright (C) <%= new Date().getFullYear() %> H5UI.io',
     ' * Licensed under the MIT license (https://mit-license.org)',
     ' */',
     ''].join('\n');
@@ -25,10 +24,11 @@ gulp.task('less', function() {
     return gulp.src(['./src/less/h5ui.less', './src/less/example.less']) // 编译目标文件(less)
         .pipe(less()) // less编译
         .pipe(header(banner)) // 头部申明
-        .pipe(csslint()) // css规范检测
         .pipe(gulp.dest('./dist/css')) // 输出文件存放目录
-
-        .pipe(cssnano()) // css压缩
+        .pipe(cssnano({ // css压缩
+            zindex: false,
+            autoprefixer: false
+        }))
         .pipe(header(banner)) // 头部申明
         .pipe(rename({suffix: '.min'})) // 文件更名(*.min)
         .pipe(gulp.dest('./dist/css')); // 输出压缩文件存放目录
