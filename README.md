@@ -34,5 +34,5 @@ H5UI组件库的视觉和交互规范输出以UED团队的《UI组件库Sketch�
 <a href="http://h5ui.io/" target="_blank">演示地址</a><br>
 </p>
 <p>
-<img src="http://docs.h5ui.io/static/img/qrcode-example.png" width="140" height="140" alt="">
+<img src="http://h5ui.io/docs/static/img/qrcode-example.png" width="140" height="140" alt="">
 </p>
