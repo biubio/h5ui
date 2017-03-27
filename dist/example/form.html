@@ -10,8 +10,8 @@
 
     <title>表单 Forms</title>
 
-    <link rel="dns-prefetch" href="//s.h5ui.io">
-    <link rel="shortcut icon" href="//s.h5ui.io/img/favicon.ico">
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" href="../img/favicon.ico">
 
     <!-- H5UI CSS -->
     <link rel="stylesheet" href="../css/h5ui.min.css">
@@ -97,7 +97,7 @@
             <label for="phone" class="h5ui-form-label">手机号</label>
             <input type="number" pattern="[0-9]*" id="phone" class="h5ui-form-input" placeholder="请输入手机号">
             <span class="h5ui-form-input_tip">
-                <a href="" class="code-btn">获取验证码</a>
+                <a href="javascript:(0);" class="code-btn" id="send-sms">获取验证码</a>
             </span>
         </div>
 
@@ -149,12 +149,12 @@
         </h5>
         <ul class="h5ui-uploader_files">
             <li class="h5ui-uploader_files_item">
-                <a href="">
+                <a href="weixin://viewimage/https://s.h5ui.io/img/example/example.png">
                     <img src="//s.h5ui.io/img/example/example.png" width="100%" height="100%" title="H5UI">
                 </a>
             </li>
             <li class="h5ui-uploader_files_item">
-                <a href="">
+                <a href="weixin://viewimage/https://s.h5ui.io/img/example/example.png">
                     <img src="//s.h5ui.io/img/example/example.png" width="100%" height="100%" title="H5UI">
                 </a>
             </li>
@@ -172,15 +172,33 @@
 
 </div>
 
+<!-- start [轻提示] -->
+<div class="h5ui-toast" id="toast-sms">
+    <div class="h5ui-toast_backdrop"></div>
+    <div class="h5ui-toast_dialog">
+        <div class="h5ui-toast_content">
+            <span>验证码发送成功</span>
+        </div>
+    </div>
+</div>
+<!-- end [轻提示] -->
+
 <!-- Copyright -->
 <div class="example-copyright">
     <a href="../index.html" class="flag"></a>
 </div>
 
 <!-- jQuery -->
-<script src="//s.h5ui.io/js/jquery/jquery.min.js"></script>
+<script src="../js/jquery.min.js"></script>
 <!-- H5UI JS -->
 <script src="../js/h5ui.min.js"></script>
+
+<script>
+    // 发送sms Toast
+    $("#send-sms").click(function() {
+        $("#toast-sms").show().delay(2000).fadeOut();
+    });
+</script>
 
 </body>
 </html>

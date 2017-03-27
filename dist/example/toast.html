@@ -10,8 +10,8 @@
 
     <title>Toast</title>
 
-    <link rel="dns-prefetch" href="//s.h5ui.io">
-    <link rel="shortcut icon" href="//s.h5ui.io/img/favicon.ico">
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" href="../img/favicon.ico">
 
     <!-- H5UI CSS -->
     <link rel="stylesheet" href="../css/h5ui.min.css">
@@ -79,7 +79,7 @@
     <div class="h5ui-toast_backdrop"></div>
     <div class="h5ui-toast_dialog">
         <div class="h5ui-toast_content">
-            <span>请登录后再进行评论</span>
+            <span>请先登录再评论</span>
         </div>
     </div>
 </div>
@@ -105,7 +105,7 @@
                     <div class="loading-icon-leaf loading-icon-leaf_10"></div>
                     <div class="loading-icon-leaf loading-icon-leaf_11"></div>
                 </div>
-                加载中
+                数据加载中
             </span>
         </div>
     </div>
@@ -124,16 +124,11 @@
 <!-- end [成功提示] -->
 
 <!-- jQuery -->
-<script src="//s.h5ui.io/js/jquery/jquery.min.js"></script>
+<script src="../js/jquery.min.js"></script>
 <!-- H5UI JS -->
 <script src="../js/h5ui.min.js"></script>
 
 <script>
-    // 刷新页面
-    function setReload(){
-        window.location.reload();
-    }
-
     // 默认Toast
     $("#btn-toast-default").click(function() {
         $("#toast-default").show().delay(2000).fadeOut();

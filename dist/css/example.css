@@ -31,7 +31,7 @@
   /* 144px */
   height: 50px;
   display: block;
-  background: url("http://s.h5ui.io/img/example/logo.png?201612081905") no-repeat;
+  background: url("//s.h5ui.io/img/example/logo.png?201612081905") no-repeat;
   background-size: 144px;
   margin: 0 auto;
 }
@@ -55,7 +55,7 @@
   color: #999;
 }
 .example-home_grid_bd .h5ui-grid_item_icon {
-  background: url("http://s.h5ui.io/img/example/icons.png?2016120081905") no-repeat;
+  background: url("//s.h5ui.io/img/example/icons.png?2016120081905") no-repeat;
   background-size: 32px;
 }
 .example-home_grid_bd .h5ui-grid_item_icon.icon-grid_form {
@@ -126,7 +126,7 @@
 .example-copyright .flag {
   width: 66px;
   height: 24px;
-  background: url("http://s.h5ui.io/img/example/flag.png?201612081905") no-repeat;
+  background: url("//s.h5ui.io/img/example/flag.png?201612081905") no-repeat;
   background-size: 66px;
   display: block;
   margin: 0 auto;
@@ -151,7 +151,7 @@
   width: 20px;
   height: 13px;
   display: block;
-  background: url("http://s.h5ui.io/img/example/example-slider_volume.png?201612081905") no-repeat;
+  background: url("//s.h5ui.io/img/example/example-slider_volume.png?201612081905") no-repeat;
   background-size: 20px;
 }
 .example-slider_volume_small {

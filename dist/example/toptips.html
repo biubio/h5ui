@@ -10,8 +10,8 @@
 
     <title>置顶提示 TopTips</title>
 
-    <link rel="dns-prefetch" href="//s.h5ui.io">
-    <link rel="shortcut icon" href="//s.h5ui.io/img/favicon.ico">
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" href="../img/favicon.ico">
 
     <!-- H5UI CSS -->
     <link rel="stylesheet" href="../css/h5ui.min.css">
@@ -32,32 +32,32 @@
 
 <body ontouchstart>
 
-<!-- start [失败提示] -->
-<div class="h5ui-toptips h5ui-toptips_error" id="toptips-error">
-    <i class="h5ui-toptips_error_icon"></i><span>当前网络链接失败，请检查你的网络设置</span>
-</div>
-<!-- end [失败提示] -->
-
 <!-- start [警告提示] -->
-<div class="h5ui-toptips h5ui-toptips_warning" id="toptips-warning" style="display: none;">
+<div class="h5ui-toptips h5ui-toptips_warning" id="toptips-warning">
     <i class="h5ui-toptips_warning_icon"></i><span>你还未进行邮箱验证，稍后记得去验证哦~</span>
 </div>
 <!-- end [警告提示] -->
+
+<!-- start [失败提示] -->
+<div class="h5ui-toptips h5ui-toptips_error" id="toptips-error" style="display: none;">
+    <i class="h5ui-toptips_error_icon"></i><span>当前网络链接失败，请检查你的网络设置。</span>
+</div>
+<!-- end [失败提示] -->
 
 <div class="h5ui-page top">
 
     <!-- start [lists] -->
     <div class="h5ui-group">
 
-        <a class="h5ui-list" href="javascript:void(0);" id="btn-toptips-error">
-            <div class="h5ui-list_bd">失败置顶提示</div>
+        <a class="h5ui-list" href="javascript:void(0);" id="btn-toptips-warning">
+            <div class="h5ui-list_bd">警告置顶提示</div>
             <div class="h5ui-list_ft">
                 <i class="h5ui-list_ft_arrow"></i>
             </div>
         </a>
 
-        <a class="h5ui-list" href="javascript:void(0);" id="btn-toptips-warning">
-            <div class="h5ui-list_bd">警告置顶提示</div>
+        <a class="h5ui-list" href="javascript:void(0);" id="btn-toptips-error">
+            <div class="h5ui-list_bd">失败置顶提示</div>
             <div class="h5ui-list_ft">
                 <i class="h5ui-list_ft_arrow"></i>
             </div>
@@ -74,7 +74,7 @@
 </div>
 
 <!-- jQuery -->
-<script src="//s.h5ui.io/js/jquery/jquery.min.js"></script>
+<script src="../js/jquery.min.js"></script>
 <!-- H5UI JS -->
 <script src="../js/h5ui.min.js"></script>
 
